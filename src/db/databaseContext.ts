@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-import { Taco, TacosSchema } from './tacoSchema';
+import { Order, OrdersSchema } from './orderSchema';
 
 // Mongoose's built in promise library is deprecated, replace it with ES2015 Promise
 mongoose.Promise = global.Promise;
@@ -10,6 +10,6 @@ const mongoDBUrl =
 
 const dbConnection = mongoose.createConnection(mongoDBUrl);
 
-const Tacos = dbConnection.model<Taco>('Tacos', TacosSchema);
+const Orders = dbConnection.model<Order>('Tacos', OrdersSchema);
 
-export { Tacos };
+export { Orders };

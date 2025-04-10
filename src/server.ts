@@ -1,12 +1,12 @@
 import express from 'express';
 
-import tacosRoutes from './taco.controller';
+import ordersRoutes from './orders.controller';
 
 const app = express();
 
 app.disable('x-powered-by');
 app.use(express.json());
-app.use('/tacos', tacosRoutes);
+app.use('/orders', ordersRoutes);
 
 app.listen(8080, () => {
   console.log('Starting node server on 0.0.0.0:8080');
