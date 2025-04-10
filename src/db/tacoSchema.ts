@@ -5,6 +5,7 @@ export interface Taco {
   ingredients: string[];
   isSpicy: boolean;
   price: number;
+  hardShell: boolean;
 }
 
 export const TacosSchema = new Schema<Taco>(
@@ -13,6 +14,7 @@ export const TacosSchema = new Schema<Taco>(
     ingredients: [{ type: String }],
     isSpicy: { type: Boolean },
     price: { type: Number },
+    hardShell: { type: Boolean }
   },
 
   {
